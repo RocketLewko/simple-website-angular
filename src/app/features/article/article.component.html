@@ -1,0 +1,12 @@
+<article>
+  <h1>This is main page title.</h1>
+  <p>{{ introductionText }}{{ expanded ? fullDescriptionText : "..." }}</p>
+
+  <nav class="buttons">
+    <button (click)="toggleReadMore()">
+      {{ expanded ? "LESS" : "MORE" }}
+    </button>
+
+    <button (click)="onShowGallery.emit()" class="primary">Show gallery</button>
+  </nav>
+</article>

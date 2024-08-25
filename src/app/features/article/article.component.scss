@@ -1,0 +1,14 @@
+article {
+  padding: 25px 50px;
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+
+    button {
+      min-width: 120px;
+    }
+  }
+}

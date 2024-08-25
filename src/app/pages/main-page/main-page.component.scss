@@ -1,0 +1,31 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--panel-background-color);
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+
+  @media (max-width: 860px) {
+    div {
+      display: none;
+    }
+  }
+
+  div {
+    min-height: 400px;
+    width: 250px;
+    min-width: 250px;
+    background: #131313;
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 250px;
+      width: 250px;
+      top: calc(50% - 125px);
+      left: -50%;
+    }
+  }
+}
