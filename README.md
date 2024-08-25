@@ -26,18 +26,18 @@ src/
 │   │   ├── footer/                 # Footer components
 │   │   └── main/                   # Main layout components
 │   │
-│   ├── models/                     # Data models used in the app
-│   ├── pages/
-│   │   └── main-page/              # Main page components
+│   ├── models/                     # Data models used in the app (e.g., image.ts)
 │   │
-│   ├── ui/
-│   │   └── button/                 # UI components (e.g., buttons)
+│   ├── pages/
+│   │   └── button/                 # Button components used in pages
 │   │
 │   ├── utils/
-│   │   └── constants/              # Utility constants
+│   │   └── constants/              # Utility constants for text display
+│   │   └── date.ts                 # Helper functions for date manipulation
 │   │
-│   ├── assets/                     # Static assets like images and styles
 │   └── styles.scss                 # Global styles
+│
+├── assets/                         # Static assets like images and styles
 │
 └── angular.json                    # Angular configuration file
 ```
