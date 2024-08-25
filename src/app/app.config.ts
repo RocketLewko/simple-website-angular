@@ -1,4 +1,8 @@
-import { ApplicationConfig, LOCALE_ID } from '@angular/core';
+import {
+  ApplicationConfig,
+  LOCALE_ID,
+  provideExperimentalZonelessChangeDetection,
+} from '@angular/core';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
 import localePl from '@angular/common/locales/pl';
@@ -11,7 +15,7 @@ registerLocaleData(localePl);
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    // provideExperimentalZonelessChangeDetection(),
+    provideExperimentalZonelessChangeDetection(),
     provideRouter(routes),
     provideClientHydration(),
     provideHttpClient(withFetch()),

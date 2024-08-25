@@ -5,31 +5,26 @@
     <button class="close-btn" (click)="closed.emit()">✕</button>
   </header>
   <div class="modal-subheader">
-    <img
-      src="https://picsum.photos/favicon.ico"
-      alt="Site Logo"
-      class="site-logo"
-    />
+    <img src="https://picsum.photos/favicon.ico" alt="Site Logo" class="site-logo" />
     <span>picsum.photos</span>
   </div>
   <div class="carousel">
     @if (images(); as images) {
-    <img
-      [src]="images[currentIndex()].download_url"
-      [alt]="images[currentIndex()].author"
-      [width]="images[currentIndex()].width"
-      [height]="images[currentIndex()].height"
-      loading="lazy"
-    />
-    <nav class="controls">
-      <button class="primary arrow" (click)="prevImage()">❮</button>
-      <button class="primary arrow" (click)="nextImage()">❯</button>
-    </nav>
-    <div class="author-info">
-      <span>Autor: {{ images[currentIndex()].author }}</span>
-    </div>
+      <img
+        [src]="images[currentIndex()].download_url"
+        [alt]="images[currentIndex()].author"
+        [width]="images[currentIndex()].width"
+        [height]="images[currentIndex()].height"
+        loading="lazy" />
+      <nav class="controls">
+        <button class="primary arrow" (click)="prevImage()">❮</button>
+        <button class="primary arrow" (click)="nextImage()">❯</button>
+      </nav>
+      <div class="author-info">
+        <span>Autor: {{ images[currentIndex()].author }}</span>
+      </div>
     } @else {
-    <p>Zdjęcia niedostępne</p>
+      <p>Zdjęcia niedostępne</p>
     }
   </div>
 </div>

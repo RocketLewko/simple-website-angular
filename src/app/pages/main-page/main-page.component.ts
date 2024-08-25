@@ -30,14 +30,10 @@ export class MainPageComponent {
   #componentRef?: ComponentRef<ImageGalleryComponent>;
 
   createComponent() {
-    this.#componentRef = this.viewContainerRef.createComponent(
-      ImageGalleryComponent
-    );
+    this.#componentRef = this.viewContainerRef.createComponent(ImageGalleryComponent);
 
     this.#componentRef?.setInput('images', this.imagesSignal());
 
-    this.#componentRef.instance.closed.subscribe(() =>
-      this.#componentRef?.destroy()
-    );
+    this.#componentRef.instance.closed.subscribe(() => this.#componentRef?.destroy());
   }
 }

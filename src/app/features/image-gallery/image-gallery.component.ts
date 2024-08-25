@@ -1,11 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  input,
-  output,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input, output, signal } from '@angular/core';
 
 import { ImageModel } from '../../models/image';
 
@@ -27,9 +20,7 @@ export class ImageGalleryComponent {
   }
 
   prevImage() {
-    this.currentIndex.update(
-      (index) => (index - 1 + this.images().length) % this.images().length
-    );
+    this.currentIndex.update((index) => (index - 1 + this.images().length) % this.images().length);
   }
 
   close() {
