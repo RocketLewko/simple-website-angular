@@ -1,27 +1,101 @@
-# SimpleWebsiteAngular
+# Simple Website Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+A simple, responsive Angular web application that displays a gallery of images. The application is designed to be fully functional across all devices and includes features for fetching and navigating images from an external source.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. **Responsive Design**: Works seamlessly across mobile, tablet, and desktop devices.
+2. **Image Gallery**: Fetches images from an external API and displays them in a gallery format.
+3. **Popup Navigation**: Allows users to click on an image to view it in a popup, with navigation options to view other images.
+4. **Zoneless Change Detection**: The application utilizes Angular’s zoneless mode for optimized performance.
+5. **Server-Side Rendering (SSR)**: Implemented using Angular SSR with signals for enhanced performance.
 
-## Code scaffolding
+## Project Structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The project is organized as follows:
 
-## Build
+```plaintext
+src/
+│
+├── app/
+│   ├── features/
+│   │   ├── article/                # Components related to articles
+│   │   └── image-gallery/          # Components for the image gallery
+│   │
+│   ├── layout/
+│   │   ├── footer/                 # Footer components
+│   │   └── main/                   # Main layout components
+│   │
+│   ├── models/                     # Data models used in the app
+│   ├── pages/
+│   │   └── main-page/              # Main page components
+│   │
+│   ├── ui/
+│   │   └── button/                 # UI components (e.g., buttons)
+│   │
+│   ├── utils/
+│   │   └── constants/              # Utility constants
+│   │
+│   ├── assets/                     # Static assets like images and styles
+│   └── styles.scss                 # Global styles
+│
+└── angular.json                    # Angular configuration file
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+To set up and run the application, follow these steps:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/simple-website-angular.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd simple-website-angular
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. To build the application for production:
+   ```bash
+   npm run build
+   ```
 
-## Running end-to-end tests
+## Key Packages
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Angular**: `^18.2.0`
+- **Angular CLI**: `^18.2.0`
+- **RxJS**: `~7.8.0`
+- **Zone.js**: `~0.14.10` (Note: This package is loaded but not used due to zoneless configuration)
+- **Express**: `^4.18.2`
+- **Typescript**: `~5.5.2`
 
-## Further help
+## API Integration
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The application integrates with the following API for fetching images:
+
+- **Picsum Photos**: `https://picsum.photos/v2/list?limit=10`
+
+## Usage
+
+- The user can click on an image to open it in a popup window.
+- Users can navigate between images using the provided navigation controls.
+
+## SSR Instructions
+
+To run the server-side rendered (SSR) version of the application:
+
+1. Build the SSR application:
+   ```bash
+   npm run build
+   ```
+2. Serve the SSR version:
+   ```bash
+   npm run serve:ssr:simple-website-angular
+   ```
